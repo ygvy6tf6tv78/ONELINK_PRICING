@@ -20,6 +20,14 @@
             <button class="tab-btn" data-target="hotels">Hotels & Resorts</button>
             <button class="tab-btn" data-target="retail">Retail & Shops</button>
         </div>
+        
+        <!-- Billing Toggle -->
+        <div class="billing-toggle-wrapper">
+            <div class="billing-toggle">
+                <button class="billing-btn active" data-billing="yearly">Pay Yearly</button>
+                <button class="billing-btn" data-billing="half-yearly">Pay 6-Monthly</button>
+            </div>
+        </div>
     </header>
 
     <div class="pricing-wrapper">
@@ -30,17 +38,23 @@
         <div id="cafes" class="pricing-category-content" style="display: block;">
             <div class="pricing-container">
                 
-                <!-- Smart Plan (Left) -->
+                <!-- Smart Plan -->
                 <div class="pricing-card side-card left-card">
                     <div class="price-row">
-                        <span class="currency">₹</span><span class="price">9,999</span>
+                        <span class="currency">₹</span><span class="price" data-yearly="9,999" data-half="4,999">9,999</span>
                     </div>
+                    <div class="half-label" style="display: none;">First 6 months</div>
                     
                     <h2 class="plan-name">
                         <img src="Group 100000ccc8682.png" alt="Icon" class="title-icon">
                         Smart
                     </h2>
                     <div class="original-price"><del>₹14,999</del> <span>+ GST</span></div>
+                    
+                    <div class="split-details" style="display: none;">
+                        <div class="split-row"><span>Next 6 months:</span> <strong>₹5,000 + GST</strong></div>
+                        <div class="split-row"><span>Total yearly value:</span> <strong>₹9,999 + GST</strong></div>
+                    </div>
                     
                     <p class="plan-desc"><strong>Best for:</strong><br>Small cafés, bakeries, food outlets and restaurants</p>
                     
@@ -84,22 +98,28 @@
                     </ul>
                     
                     <div class="renewal-info">Renewal from Year 2: ₹2,499/year</div>
-                    <button class="btn btn-secondary">Get Smart</button>
+                    <button class="btn btn-secondary cta-btn" data-yearly="Get Smart" data-half="Start with 6 Months">Get Smart</button>
                 </div>
 
-                <!-- Signature Plan (Center) -->
+                <!-- Signature Plan -->
                 <div class="pricing-card center-card">
                     <div class="most-popular-pill">MOST CHOSEN</div>
                     
                     <div class="price-row">
-                        <span class="currency">₹</span><span class="price">18,999</span>
+                        <span class="currency">₹</span><span class="price" data-yearly="18,999" data-half="9,499">18,999</span>
                     </div>
+                    <div class="half-label" style="display: none;">First 6 months</div>
                     
                     <h2 class="plan-name">
                         <img src="Group 100000ccc8682.png" alt="Icon" class="title-icon filter-white">
                         Signature
                     </h2>
                     <div class="original-price center-op"><del>₹24,999</del> <span>+ GST</span></div>
+                    
+                    <div class="split-details" style="display: none;">
+                        <div class="split-row"><span>Next 6 months:</span> <strong>₹9,500 + GST</strong></div>
+                        <div class="split-row"><span>Total yearly value:</span> <strong>₹18,999 + GST</strong></div>
+                    </div>
                     
                     <p class="plan-desc center-desc"><strong>Best for:</strong><br>Premium cafés, restaurants, lounges and growing food brands</p>
                     
@@ -149,20 +169,26 @@
                     </ul>
                     
                     <div class="renewal-info">Renewal from Year 2: ₹3,000/year</div>
-                    <button class="btn btn-primary">Get Signature</button>
+                    <button class="btn btn-primary cta-btn" data-yearly="Get Signature" data-half="Start with 6 Months">Get Signature</button>
                 </div>
 
-                <!-- Enterprise Plan (Right) -->
+                <!-- Enterprise Plan -->
                 <div class="pricing-card side-card right-card">
                     <div class="price-row">
-                        <span class="currency">₹</span><span class="price">24,999</span>
+                        <span class="currency">₹</span><span class="price" data-yearly="24,999" data-half="12,499">24,999</span>
                     </div>
+                    <div class="half-label" style="display: none;">First 6 months</div>
                     
                     <h2 class="plan-name">
                         <img src="Group 100000ccc8682.png" alt="Icon" class="title-icon">
                         Enterprise
                     </h2>
                     <div class="original-price"><del>₹39,999</del> <span>+ GST</span></div>
+                    
+                    <div class="split-details" style="display: none;">
+                        <div class="split-row"><span>Next 6 months:</span> <strong>₹12,500 + GST</strong></div>
+                        <div class="split-row"><span>Total yearly value:</span> <strong>₹24,999 + GST</strong></div>
+                    </div>
                     
                     <p class="plan-desc"><strong>Best for:</strong><br>Premium restaurants, lounges, multi-menu restaurants and high-footfall cafés</p>
                     
@@ -206,7 +232,7 @@
                     </ul>
                     
                     <div class="renewal-info">Renewal from Year 2: ₹3,999/year</div>
-                    <button class="btn btn-secondary">Get Enterprise</button>
+                    <button class="btn btn-secondary cta-btn" data-yearly="Get Enterprise" data-half="Start with 6 Months">Get Enterprise</button>
                 </div>
                 
             </div>
@@ -233,17 +259,23 @@
         <div id="hotels" class="pricing-category-content" style="display: none;">
             <div class="pricing-container">
                 
-                <!-- Stay Smart Plan (Left) -->
+                <!-- Stay Smart Plan -->
                 <div class="pricing-card side-card left-card">
                     <div class="price-row">
-                        <span class="currency">₹</span><span class="price">14,999</span>
+                        <span class="currency">₹</span><span class="price" data-yearly="14,999" data-half="7,499">14,999</span>
                     </div>
+                    <div class="half-label" style="display: none;">First 6 months</div>
                     
                     <h2 class="plan-name">
                         <img src="Group 100000ccc8682.png" alt="Icon" class="title-icon">
                         Stay Smart
                     </h2>
                     <div class="original-price"><del>₹24,999</del> <span>+ GST</span></div>
+                    
+                    <div class="split-details" style="display: none;">
+                        <div class="split-row"><span>Next 6 months:</span> <strong>₹7,500 + GST</strong></div>
+                        <div class="split-row"><span>Total yearly value:</span> <strong>₹14,999 + GST</strong></div>
+                    </div>
                     
                     <p class="plan-desc"><strong>Best for:</strong><br>Small hotels, guest houses, homestays and budget stays</p>
                     
@@ -287,22 +319,28 @@
                     </ul>
                     
                     <div class="renewal-info">Renewal from Year 2: ₹2,499/year</div>
-                    <button class="btn btn-secondary">Get Stay Smart</button>
+                    <button class="btn btn-secondary cta-btn" data-yearly="Get Stay Smart" data-half="Start with 6 Months">Get Stay Smart</button>
                 </div>
 
-                <!-- Direct Booking Plan (Center) -->
+                <!-- Direct Booking Plan -->
                 <div class="pricing-card center-card">
                     <div class="most-popular-pill">MOST CHOSEN</div>
                     
                     <div class="price-row">
-                        <span class="currency">₹</span><span class="price">24,999</span>
+                        <span class="currency">₹</span><span class="price" data-yearly="24,999" data-half="12,499">24,999</span>
                     </div>
+                    <div class="half-label" style="display: none;">First 6 months</div>
                     
                     <h2 class="plan-name">
                         <img src="Group 100000ccc8682.png" alt="Icon" class="title-icon filter-white">
                         Direct Booking
                     </h2>
                     <div class="original-price center-op"><del>₹39,999</del> <span>+ GST</span></div>
+                    
+                    <div class="split-details" style="display: none;">
+                        <div class="split-row"><span>Next 6 months:</span> <strong>₹12,500 + GST</strong></div>
+                        <div class="split-row"><span>Total yearly value:</span> <strong>₹24,999 + GST</strong></div>
+                    </div>
                     
                     <p class="plan-desc center-desc"><strong>Best for:</strong><br>Hotels, boutique stays, resorts and premium guest houses</p>
                     
@@ -352,20 +390,26 @@
                     </ul>
                     
                     <div class="renewal-info">Renewal from Year 2: ₹3,000/year</div>
-                    <button class="btn btn-primary">Get Direct Booking</button>
+                    <button class="btn btn-primary cta-btn" data-yearly="Get Direct Booking" data-half="Start with 6 Months">Get Direct Booking</button>
                 </div>
 
-                <!-- Resort Enterprise Plan (Right) -->
+                <!-- Resort Enterprise Plan -->
                 <div class="pricing-card side-card right-card">
                     <div class="price-row">
-                        <span class="currency">₹</span><span class="price">39,999</span>
+                        <span class="currency">₹</span><span class="price" data-yearly="39,999" data-half="19,999">39,999</span>
                     </div>
+                    <div class="half-label" style="display: none;">First 6 months</div>
                     
                     <h2 class="plan-name">
                         <img src="Group 100000ccc8682.png" alt="Icon" class="title-icon">
                         Resort Enterprise
                     </h2>
                     <div class="original-price"><del>₹59,999</del> <span>+ GST</span></div>
+                    
+                    <div class="split-details" style="display: none;">
+                        <div class="split-row"><span>Next 6 months:</span> <strong>₹20,000 + GST</strong></div>
+                        <div class="split-row"><span>Total yearly value:</span> <strong>₹39,999 + GST</strong></div>
+                    </div>
                     
                     <p class="plan-desc"><strong>Best for:</strong><br>Resorts, premium hotels, multi-room properties and high-footfall stays</p>
                     
@@ -409,7 +453,7 @@
                     </ul>
                     
                     <div class="renewal-info">Renewal from Year 2: ₹3,999/year</div>
-                    <button class="btn btn-secondary">Get Resort Enterprise</button>
+                    <button class="btn btn-secondary cta-btn" data-yearly="Get Resort Enterprise" data-half="Start with 6 Months">Get Resort Enterprise</button>
                 </div>
                 
             </div>
@@ -436,17 +480,23 @@
         <div id="retail" class="pricing-category-content" style="display: none;">
             <div class="pricing-container">
                 
-                <!-- Catalogue Smart Plan (Left) -->
+                <!-- Catalogue Smart Plan -->
                 <div class="pricing-card side-card left-card">
                     <div class="price-row">
-                        <span class="currency">₹</span><span class="price">9,999</span>
+                        <span class="currency">₹</span><span class="price" data-yearly="9,999" data-half="4,999">9,999</span>
                     </div>
+                    <div class="half-label" style="display: none;">First 6 months</div>
                     
                     <h2 class="plan-name">
                         <img src="Group 100000ccc8682.png" alt="Icon" class="title-icon">
                         Catalogue Smart
                     </h2>
                     <div class="original-price"><del>₹14,999</del> <span>+ GST</span></div>
+                    
+                    <div class="split-details" style="display: none;">
+                        <div class="split-row"><span>Next 6 months:</span> <strong>₹5,000 + GST</strong></div>
+                        <div class="split-row"><span>Total yearly value:</span> <strong>₹9,999 + GST</strong></div>
+                    </div>
                     
                     <p class="plan-desc"><strong>Best for:</strong><br>Small shops, dry fruit stores, boutiques, gift shops and local retail stores</p>
                     
@@ -490,22 +540,28 @@
                     </ul>
                     
                     <div class="renewal-info">Renewal from Year 2: ₹2,499/year</div>
-                    <button class="btn btn-secondary">Get Catalogue Smart</button>
+                    <button class="btn btn-secondary cta-btn" data-yearly="Get Catalogue Smart" data-half="Start with 6 Months">Get Catalogue Smart</button>
                 </div>
 
-                <!-- Retail Signature Plan (Center) -->
+                <!-- Retail Signature Plan -->
                 <div class="pricing-card center-card">
                     <div class="most-popular-pill">MOST CHOSEN</div>
                     
                     <div class="price-row">
-                        <span class="currency">₹</span><span class="price">13,999</span>
+                        <span class="currency">₹</span><span class="price" data-yearly="13,999" data-half="6,999">13,999</span>
                     </div>
+                    <div class="half-label" style="display: none;">First 6 months</div>
                     
                     <h2 class="plan-name">
                         <img src="Group 100000ccc8682.png" alt="Icon" class="title-icon filter-white">
                         Retail Signature
                     </h2>
                     <div class="original-price center-op"><del>₹24,999</del> <span>+ GST</span></div>
+                    
+                    <div class="split-details" style="display: none;">
+                        <div class="split-row"><span>Next 6 months:</span> <strong>₹7,000 + GST</strong></div>
+                        <div class="split-row"><span>Total yearly value:</span> <strong>₹13,999 + GST</strong></div>
+                    </div>
                     
                     <p class="plan-desc center-desc"><strong>Best for:</strong><br>Pashmina stores, handicraft shops, dry fruit brands, saffron stores, boutiques and premium retail shops</p>
                     
@@ -549,20 +605,26 @@
                     </ul>
                     
                     <div class="renewal-info">Renewal from Year 2: ₹3,000/year</div>
-                    <button class="btn btn-primary">Get Retail Signature</button>
+                    <button class="btn btn-primary cta-btn" data-yearly="Get Retail Signature" data-half="Start with 6 Months">Get Retail Signature</button>
                 </div>
 
-                <!-- Retail Enterprise Plan (Right) -->
+                <!-- Retail Enterprise Plan -->
                 <div class="pricing-card side-card right-card">
                     <div class="price-row">
-                        <span class="currency">₹</span><span class="price">24,999</span>
+                        <span class="currency">₹</span><span class="price" data-yearly="24,999" data-half="12,499">24,999</span>
                     </div>
+                    <div class="half-label" style="display: none;">First 6 months</div>
                     
                     <h2 class="plan-name">
                         <img src="Group 100000ccc8682.png" alt="Icon" class="title-icon">
                         Retail Enterprise
                     </h2>
                     <div class="original-price"><del>₹39,999</del> <span>+ GST</span></div>
+                    
+                    <div class="split-details" style="display: none;">
+                        <div class="split-row"><span>Next 6 months:</span> <strong>₹12,500 + GST</strong></div>
+                        <div class="split-row"><span>Total yearly value:</span> <strong>₹24,999 + GST</strong></div>
+                    </div>
                     
                     <p class="plan-desc"><strong>Best for:</strong><br>Large showrooms, premium handicraft stores, pashmina showrooms, carpet stores and high-footfall retail brands</p>
                     
@@ -606,7 +668,7 @@
                     </ul>
                     
                     <div class="renewal-info">Renewal from Year 2: ₹3,999/year</div>
-                    <button class="btn btn-secondary">Get Retail Enterprise</button>
+                    <button class="btn btn-secondary cta-btn" data-yearly="Get Retail Enterprise" data-half="Start with 6 Months">Get Retail Enterprise</button>
                 </div>
                 
             </div>
@@ -626,10 +688,16 @@
             </div>
         </div>
 
+        <!-- Footer Note -->
+        <p class="pricing-footer-note">
+            All plans are yearly OneLink plans. Pay 6-Monthly only splits the same yearly price into two 6-month payments. GST applicable as per invoice.
+        </p>
+
     </div>
 
-    <!-- JavaScript to toggle the tabs and header text -->
+    <!-- JavaScript to toggle the tabs and billing -->
     <script>
+        // --- Category Tabs Logic ---
         const tabs = document.querySelectorAll('.tab-btn');
         const contents = document.querySelectorAll('.pricing-category-content');
         const mainTitle = document.getElementById('main-title');
@@ -642,28 +710,19 @@
 
         tabs.forEach(tab => {
             tab.addEventListener('click', () => {
-                // Remove active class from all tabs
                 tabs.forEach(t => t.classList.remove('active'));
-                
-                // Add active class to clicked tab
                 tab.classList.add('active');
                 
-                // Get the target category
                 const target = tab.getAttribute('data-target');
                 
-                // Update the main header title smoothly
                 mainTitle.style.opacity = 0;
                 setTimeout(() => {
                     mainTitle.textContent = sectionTitles[target];
                     mainTitle.style.opacity = 1;
                 }, 150);
                 
-                // Hide all contents and show target
-                contents.forEach(c => {
-                    c.style.display = 'none';
-                });
+                contents.forEach(c => c.style.display = 'none');
                 
-                // Quick animation for fade in
                 const targetEl = document.getElementById(target);
                 targetEl.style.opacity = 0;
                 targetEl.style.display = 'block';
@@ -674,8 +733,55 @@
             });
         });
         
-        // Setup initial transition for title
         mainTitle.style.transition = 'opacity 0.15s ease';
+
+        // --- Billing Toggle Logic ---
+        const billingBtns = document.querySelectorAll('.billing-btn');
+        billingBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                billingBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                
+                const mode = btn.getAttribute('data-billing');
+                
+                document.querySelectorAll('.pricing-card').forEach(card => {
+                    const priceEl = card.querySelector('.price');
+                    const halfLabel = card.querySelector('.half-label');
+                    const splitDetails = card.querySelector('.split-details');
+                    const ctaBtn = card.querySelector('.cta-btn');
+                    
+                    if (mode === 'half-yearly') {
+                        // Switch to 6-monthly view
+                        priceEl.style.opacity = 0;
+                        setTimeout(() => {
+                            priceEl.textContent = priceEl.getAttribute('data-half');
+                            priceEl.style.opacity = 1;
+                        }, 150);
+                        
+                        halfLabel.style.display = 'block';
+                        splitDetails.style.display = 'block';
+                        ctaBtn.textContent = ctaBtn.getAttribute('data-half');
+                    } else {
+                        // Switch to Yearly view
+                        priceEl.style.opacity = 0;
+                        setTimeout(() => {
+                            priceEl.textContent = priceEl.getAttribute('data-yearly');
+                            priceEl.style.opacity = 1;
+                        }, 150);
+                        
+                        halfLabel.style.display = 'none';
+                        splitDetails.style.display = 'none';
+                        ctaBtn.textContent = ctaBtn.getAttribute('data-yearly');
+                    }
+                });
+            });
+        });
+        
+        // Add transition to price for smooth change
+        document.querySelectorAll('.price').forEach(p => {
+            p.style.transition = 'opacity 0.15s ease';
+        });
+
     </script>
 </body>
 </html>

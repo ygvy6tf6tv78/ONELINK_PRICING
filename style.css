@@ -426,6 +426,117 @@ body {
     color: var(--text-dark);
 }
 
+/* Billing Toggle */
+.billing-toggle-wrapper {
+    text-align: center;
+    margin: 2rem auto 1rem;
+    max-width: 600px;
+}
+
+.billing-toggle {
+    display: inline-flex;
+    background: #F1F5F9;
+    border-radius: 100px;
+    padding: 0.5rem;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.03);
+}
+
+.billing-btn {
+    background: transparent;
+    color: #64748B;
+    padding: 0.75rem 2rem;
+    border-radius: 100px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.billing-btn:hover {
+    color: #0F172A;
+}
+
+.billing-btn.active {
+    background: #FFFFFF;
+    color: #2563EB;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08), 0 1px 3px rgba(0,0,0,0.02);
+}
+
+.billing-helper {
+    font-size: 0.9rem;
+    color: #64748B;
+    margin-top: 1.25rem;
+    line-height: 1.5;
+    padding: 0 1rem;
+}
+
+/* 6-Monthly Splits */
+.half-label {
+    font-size: 0.85rem;
+    color: #64748B;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-top: -0.5rem;
+    margin-bottom: 1rem;
+}
+.center-card .half-label {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.split-details {
+    background: #F8FAFC;
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.center-card .split-details {
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.split-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    color: #475569;
+}
+.split-row:last-child {
+    margin-bottom: 0;
+    padding-top: 0.5rem;
+    border-top: 1px dashed #CBD5E1;
+}
+
+.center-card .split-row {
+    color: rgba(255, 255, 255, 0.9);
+}
+.center-card .split-row:last-child {
+    border-top: 1px dashed rgba(255,255,255,0.3);
+}
+
+.split-row strong {
+    color: #0F172A;
+    font-weight: 700;
+}
+.center-card .split-row strong {
+    color: #FFFFFF;
+}
+
+/* Footer Note */
+.pricing-footer-note {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #94A3B8;
+    max-width: 800px;
+    margin: -1.5rem auto 4rem;
+    line-height: 1.5;
+    padding: 0 1rem;
+}
+
 /* Responsive Design */
 @media (max-width: 1120px) {
     .pricing-card {
