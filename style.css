@@ -426,13 +426,33 @@ body {
     color: var(--text-dark);
 }
 
-/* Secret Toggle */
-.billing-toggle-wrapper {
-    text-align: center;
-    margin: 1rem auto 2rem;
-    max-width: 100px;
+/* Settings Toggles (Top Right) */
+.settings-toggles {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: flex-end;
+    z-index: 100;
 }
 
+.setting-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+    color: #64748B;
+    font-weight: 600;
+    transition: opacity 0.3s;
+}
+
+.setting-item:hover {
+    opacity: 1 !important;
+}
+
+/* Secret Toggle Base */
 .secret-toggle {
     position: relative;
     display: inline-block;
