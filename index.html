@@ -21,12 +21,12 @@
             <button class="tab-btn" data-target="retail">Retail & Shops</button>
         </div>
         
-        <!-- Billing Toggle -->
+        <!-- Secret Billing Toggle -->
         <div class="billing-toggle-wrapper">
-            <div class="billing-toggle">
-                <button class="billing-btn active" data-billing="yearly">Pay Yearly</button>
-                <button class="billing-btn" data-billing="half-yearly">Pay 6-Monthly</button>
-            </div>
+            <label class="secret-toggle" title="Switch Mode">
+                <input type="checkbox" id="secret-billing-toggle">
+                <span class="slider"></span>
+            </label>
         </div>
     </header>
 
@@ -736,44 +736,37 @@
         mainTitle.style.transition = 'opacity 0.15s ease';
 
         // --- Billing Toggle Logic ---
-        const billingBtns = document.querySelectorAll('.billing-btn');
-        billingBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                billingBtns.forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
+        const secretToggle = document.getElementById('secret-billing-toggle');
+        secretToggle.addEventListener('change', (e) => {
+            const mode = e.target.checked ? 'half-yearly' : 'yearly';
+            
+            document.querySelectorAll('.pricing-card').forEach(card => {
+                const priceEl = card.querySelector('.price');
+                const halfLabel = card.querySelector('.half-label');
+                const splitDetails = card.querySelector('.split-details');
+                const ctaBtn = card.querySelector('.cta-btn');
                 
-                const mode = btn.getAttribute('data-billing');
-                
-                document.querySelectorAll('.pricing-card').forEach(card => {
-                    const priceEl = card.querySelector('.price');
-                    const halfLabel = card.querySelector('.half-label');
-                    const splitDetails = card.querySelector('.split-details');
-                    const ctaBtn = card.querySelector('.cta-btn');
+                if (mode === 'half-yearly') {
+                    priceEl.style.opacity = 0;
+                    setTimeout(() => {
+                        priceEl.textContent = priceEl.getAttribute('data-half');
+                        priceEl.style.opacity = 1;
+                    }, 150);
                     
-                    if (mode === 'half-yearly') {
-                        // Switch to 6-monthly view
-                        priceEl.style.opacity = 0;
-                        setTimeout(() => {
-                            priceEl.textContent = priceEl.getAttribute('data-half');
-                            priceEl.style.opacity = 1;
-                        }, 150);
-                        
-                        halfLabel.style.display = 'block';
-                        splitDetails.style.display = 'block';
-                        ctaBtn.textContent = ctaBtn.getAttribute('data-half');
-                    } else {
-                        // Switch to Yearly view
-                        priceEl.style.opacity = 0;
-                        setTimeout(() => {
-                            priceEl.textContent = priceEl.getAttribute('data-yearly');
-                            priceEl.style.opacity = 1;
-                        }, 150);
-                        
-                        halfLabel.style.display = 'none';
-                        splitDetails.style.display = 'none';
-                        ctaBtn.textContent = ctaBtn.getAttribute('data-yearly');
-                    }
-                });
+                    if(halfLabel) halfLabel.style.display = 'block';
+                    if(splitDetails) splitDetails.style.display = 'block';
+                    if(ctaBtn) ctaBtn.textContent = ctaBtn.getAttribute('data-half');
+                } else {
+                    priceEl.style.opacity = 0;
+                    setTimeout(() => {
+                        priceEl.textContent = priceEl.getAttribute('data-yearly');
+                        priceEl.style.opacity = 1;
+                    }, 150);
+                    
+                    if(halfLabel) halfLabel.style.display = 'none';
+                    if(splitDetails) splitDetails.style.display = 'none';
+                    if(ctaBtn) ctaBtn.textContent = ctaBtn.getAttribute('data-yearly');
+                }
             });
         });
         

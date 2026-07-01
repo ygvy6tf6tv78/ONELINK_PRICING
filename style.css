@@ -426,49 +426,57 @@ body {
     color: var(--text-dark);
 }
 
-/* Billing Toggle */
+/* Secret Toggle */
 .billing-toggle-wrapper {
     text-align: center;
-    margin: 2rem auto 1rem;
-    max-width: 600px;
+    margin: 1rem auto 2rem;
+    max-width: 100px;
 }
 
-.billing-toggle {
-    display: inline-flex;
-    background: #F1F5F9;
-    border-radius: 100px;
-    padding: 0.5rem;
-    box-shadow: inset 0 2px 4px rgba(0,0,0,0.03);
+.secret-toggle {
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 24px;
 }
 
-.billing-btn {
-    background: transparent;
-    color: #64748B;
-    padding: 0.75rem 2rem;
-    border-radius: 100px;
-    font-size: 0.95rem;
-    font-weight: 700;
-    border: none;
+.secret-toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.secret-toggle .slider {
+    position: absolute;
     cursor: pointer;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #E2E8F0;
+    transition: .4s;
+    border-radius: 34px;
 }
 
-.billing-btn:hover {
-    color: #0F172A;
+.secret-toggle .slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.billing-btn.active {
-    background: #FFFFFF;
-    color: #2563EB;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08), 0 1px 3px rgba(0,0,0,0.02);
+.secret-toggle input:checked + .slider {
+    background-color: #2563EB;
 }
 
-.billing-helper {
-    font-size: 0.9rem;
-    color: #64748B;
-    margin-top: 1.25rem;
-    line-height: 1.5;
-    padding: 0 1rem;
+.secret-toggle input:checked + .slider:before {
+    transform: translateX(20px);
 }
 
 /* 6-Monthly Splits */
